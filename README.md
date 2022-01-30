@@ -1,4 +1,4 @@
-##**ALT.NET**
+**ALT.NET**
 
 _The build is still in semi-active development_
 
