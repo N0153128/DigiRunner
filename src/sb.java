@@ -5,10 +5,43 @@ import java.util.*;
 
 public class sb {
 
+	public static void me(int arg1) {
+		System.out.println("method 1 triggered");
+	}
+
+	public static void me(int arg1, int arg2) {
+		System.out.println("method 2 triggered");
+	}
+
+	public static int me(double arg1) {
+		System.out.println("method 3 triggered");
+		return 3;
+	}
+
+/*      public static int me(int arg1, int arg2) {
+		System.out.println("method 4 triggered");
+		return 3;
+	}
+*/
  	public static void main (String[] args) {
-		HashMap<Integer,Integer> hm = new HashMap<Integer,Integer>();
-		hm.put(1, 1);
-		System.out.println(hm);
+		int su = 0;
+		int su2 = su+10;
+		System.out.println(su2);
+		
+		System.out.println(1+(int)(Math.random()*100*2.5));
+		System.out.println(1+(int)(1.5));
+		sb.me(1);
+		sb.me(1, 2);
+		//sb.me(2.3);
+//		System.out.println(sb.me(1));
+//		System.out.println(sb.me(1, 2));
+	//	JSONObject obj = new JSONObject();
+	//	obj.put("name", "suka");
+	//	System.out.println("object: "+obj);
+		
+		//	HashMap<Integer,Integer> hm = new HashMap<Integer,Integer>();
+	//	hm.put(1, 1);
+	//	System.out.println(hm);
 		
 		//int[] suka = new int[32];
 		//System.out.println(suka.getClass());

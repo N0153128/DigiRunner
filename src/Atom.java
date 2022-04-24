@@ -100,7 +100,7 @@ public class Atom {
 			Date d2 = new Date();
 			long now = d2.getTime();
 			long diff = (now - start);
-			if (diff == 5000) {
+			if (diff == 60000) {
 				System.out.println("total: " + counter + " P/M with init " + init);	
 				break;
 			}
