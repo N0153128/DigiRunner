@@ -1,7 +1,4 @@
 # Alt.net - hackable game
-Alt.net is a netrunning CLI game made for fun. It combines cryptocurrency concept and adds networking features in order to let people compete, communicate and build communities. Alt.net is a game that offers fully hackable client and a semi-closed-source server, that will be core of the game. The main goals of a netrunner, is to collect artifacts that can be found within the grid, collect as much Neon as possible and to climb up the leaderboard as high as possible, using their own coding and reverse engineering skills. Alt.net incorporates some features of oldschool BBSs. Unlike Bitcoin, Etherium or other cryptocurrencies - Alt.net uses relatively easy "mining operations" that does not involve blockchain. Ideally, instead of loading CPU with unnecessary, useless operations, the miner would use relatively useful operations. Apparently, I'm too dum-dum to come up with something that can be useful. Hoping to find something out in the future.
-
-However, the project is still in development.
 
 ### Implemented
 - ``Atom.hexer()`` base mining method, by default takes ``init`` parameter that defines the amount of "blocks" to be mined. Uses alternative arguments for boosts, penalties and other modifiers.
@@ -19,8 +16,9 @@ However, the project is still in development.
 - networking capabilities
 
 ### Side notes
-- If a number is greater than 0 - it acts as a multiplier
-- If a number is lower than 0 - it acts as a divider
+>depricated
+>- If a number is greater than 0 - it acts as a multiplier
+>- If a number is lower than 0 - it acts as a divider
 > In other words, < = > and > = < (Less is more and more is less)
 
 
@@ -36,3 +34,7 @@ Lol i should do this a bit more often...
 - Hack - Alternative Alt.net client, compatible with the mainframe.
 - Mainframe - Main server of the Alt.net, that does everything from validation of user data and cell management to communication between Alts.
 - Scene - Introduction screen of the client.
+
+
+### News and updates
+- ==25.04.2022== Robot class now has all features of the Atom class with improved hierarchy and Effective Builder Pattern implementation. Atom class becomes deprecated.
