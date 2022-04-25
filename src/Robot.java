@@ -70,6 +70,26 @@ public class Robot{
 		return json;
 	}
 
+	public void benchMine() {
+		int counter = 0;
+		Date d1 = new Date();
+		long start = d1.getTime();
+		System.out.println("Start: " + start);
+		while(true) {
+			hexer();
+			counter++;
+			Date d2 = new Date();
+			long now = d2.getTime();
+			long diff = (now - start);
+			System.out.println("Now: " + now);
+			if (diff >= 3000) {
+				System.out.println("Total: " + counter + " P/M with init: " + getInit());
+				break;
+			}
+		}
+	
+	}
+
 	public static class Builder {
 		private final int init;
 		private int divider;
@@ -112,10 +132,8 @@ public class Robot{
 
 	public static void main(String[] args) {
 		System.out.println("Hello world, starting shit");
-		Robot robot = new Robot.Builder(10000)
-			.delay(10)
+		Robot robot = new Robot.Builder(64)
 			.build();
-
 		System.out.println(robot.hexer());
 		System.out.println();
 		System.out.println(robot.getInit());
@@ -123,6 +141,8 @@ public class Robot{
 		System.out.println(robot.getMultiplier());
 		System.out.println(robot.getDelay());
 		System.out.println(robot.getAccel());
+		System.out.println();
+		robot.benchMine();
 	}
 
 }
