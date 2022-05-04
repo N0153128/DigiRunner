@@ -9,11 +9,17 @@
 > Multiplier - increases scope of each block's value - negative ==Done==
 > Delay - increases block size ==Done==
 > Accelerate - decreases block size ==Done==
+> Net: Magnet - increases the amount of tabs in a block at a cost of other user's tabs, makinng them less valuable.
+> Net:Decay - decreases the amount of tabs in a block, populating other users' blocks with new tabs.
 
 ### To be implemented
 - More mods
 - ASCII-styled intro screen
 - networking capabilities
+- client-side leaderboard
+- rules command
+- storage support
+	- 
 
 ### Side notes
 >depricated
