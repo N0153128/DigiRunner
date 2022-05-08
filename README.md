@@ -38,9 +38,10 @@ Lol i should do this a bit more often...
 - Mod - Modification, used to ease, complicate or alter mining process.
 - Board - Leaderboard of the most productive Alts.
 - Hack - Alternative Alt.net client, compatible with the mainframe.
-- Mainframe - Main server of the Alt.net, that does everything from validation of user data and cell management to communication between Alts.
+- Mainframe, master-server - Main server of the Alt.net, that does everything from validation of user data and cell management to communication between Alts.
 - Scene - Introduction screen of the client.
-
+- Hub - A representation of a single node that connects several Homes.
+- Home - A hardware representation of a single user node that serves as an entry point to the network for other Alts.
 
 ### News and updates
 - ==25.04.2022== Robot class now has all features of the Atom class with improved hierarchy and Effective Builder Pattern implementation. Atom class becomes deprecated.
