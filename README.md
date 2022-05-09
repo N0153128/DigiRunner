@@ -26,7 +26,8 @@
 >- If a number is greater than 0 - it acts as a multiplier
 >- If a number is lower than 0 - it acts as a divider
 > In other words, < = > and > = < (Less is more and more is less)
-
+#### network
+Alt.net will be using public STUN/TURN servers in order to enable client/server and p2p connection, which will make an IP of the user publicly accessible.
 
 Lol i should do this a bit more often...
 
@@ -45,3 +46,11 @@ Lol i should do this a bit more often...
 
 ### News and updates
 - ==25.04.2022== Robot class now has all features of the Atom class with improved hierarchy and Effective Builder Pattern implementation. Atom class becomes deprecated.
+
+### API (kinda)
+*Robot getters*
+- `Robot.getInit()`  returns Init parameter if specified.
+- `Robot.getDivider()` returns Divider parameter if specified.
+- `Robot.getMultiplier()`returns Multiplier parameter if specified.
+- `Robot.getDelay()`returns Delay parameter if specified.
+- `Robot.getAccel()`returns Accel parameter if specified.
