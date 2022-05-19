@@ -15,7 +15,19 @@ public class Bot {
 				InetAddress addr = request.getAddress();
 				int port = request.getPort();
 				String msg = new String(request.getData(), 0, request.getLength());
-				System.out.println(msg);
+				if (msg.equals("/ping")) {
+					System.out.println("hi");
+				} else if (msg.equals("/off")) {
+					System.out.println("Shutting down...");
+					System.exit(0);
+				} else if (msg.equals("/share")) {
+					System.out.println(request.getAddress());
+				} else if (msg.equals("/echo")) {
+					DatagramPacket = new DatagramPacket(msg.getBytes(), msg.getBytes.length, addr, port)
+					sock0.send()
+					System.out.println(msg);
+				}
+				//System.out.println(msg);
 			}
 		}
 		catch (Exception ex) {

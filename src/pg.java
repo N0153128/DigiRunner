@@ -2,6 +2,8 @@
 import java.lang.Thread;
 import java.io.*;
 import java.util.*;
+import java.net.*;
+
 
 public class pg {
 
@@ -36,14 +38,30 @@ public class pg {
 		return 3;
 	}
 */
+	public static String shortCut(String message) {
+		Scanner inp = new Scanner(System.in);
+		System.out.print(message + " ");
+		String word = inp.nextLine();
+		return word;
+
+	}
+
  	public static void main (String[] args) {
+		System.out.println(shortCut("who?"));
+
 		int su = 1;
 		int ka = 0;
 
 		if (su == 1 && ka == 1) {
 			System.out.println("yes");       
 		}
-		
+		try{
+			InetAddress ad = InetAddress.getLocalHost();
+			System.out.println(ad);
+		}
+		catch (Exception ex) {
+			System.out.println(ex);
+		}
 		//int su = 0;
 		//int su2 = su+10;
 		//System.out.println(su2);
