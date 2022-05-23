@@ -23,8 +23,9 @@ public class Bot {
 				} else if (msg.equals("/share")) {
 					System.out.println(request.getAddress());
 				} else if (msg.equals("/echo")) {
-					DatagramPacket = new DatagramPacket(msg.getBytes(), msg.getBytes.length, addr, port)
-					sock0.send()
+					byte[] pl = msg.getBytes();
+					DatagramPacket pack = new DatagramPacket(pl, pl.length, addr, port);
+					sock0.send(pack);
 					System.out.println(msg);
 				}
 				//System.out.println(msg);
