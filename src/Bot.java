@@ -22,11 +22,14 @@ public class Bot {
 					System.exit(0);
 				} else if (msg.equals("/share")) {
 					System.out.println(request.getAddress());
-				} else if (msg.equals("/echo")) {
-					byte[] pl = msg.getBytes();
-					DatagramPacket pack = new DatagramPacket(pl, pl.length, addr, port);
+				} else {
+					byte[] pl = new byte[256];
+					String reply = "Unknown command: "+msg;
+					pl = reply.getBytes();
+					DatagramPacket pack = new DatagramPacket(pl, pl.length, request.getAddress(), 4446);
 					sock0.send(pack);
-					System.out.println(msg);
+					System.out.println("payload: " + pl + " length: " + pl.length + " address: " + request.getAddress() + " port: " + 4446);
+					System.out.println("Unknown command: " + msg);
 				}
 				//System.out.println(msg);
 			}
