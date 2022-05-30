@@ -45,7 +45,8 @@ Lol i should do this a bit more often...
 - Home - A hardware representation of a single user node that serves as an entry point to the network for other Alts.
 
 ### News and updates
-- ==25.04.2022== Robot class now has all features of the Atom class with improved hierarchy and Effective Builder Pattern implementation. Atom class becomes deprecated.
+- *25.04.2022* Robot class now has all features of the Atom class with improved hierarchy and Effective Builder Pattern implementation. Atom class becomes deprecated.
+- *30.05.2022* Added abstract UDP client and server, added auto-port selection for the client, added Fetcher daemon for the client, added shortcuts, for easy input parsing. 
 
 ### API (kinda)
 *Robot getters*
