@@ -21,15 +21,15 @@ public class Bot {
 					System.out.println("Shutting down...");
 					System.exit(0);
 				} else if (msg.equals("/share")) {
-					System.out.println(request.getAddress());
+					System.out.println(request.getAddress() + ":" + request.getPort() + " remote:  " + request.getSocketAddress());
 				} else {
 					byte[] pl = new byte[256];
-					String reply = "Unknown command: "+msg;
+					String reply = "\nUnknown command: " + msg + "\n";
 					pl = reply.getBytes();
-					DatagramPacket pack = new DatagramPacket(pl, pl.length, request.getAddress(), 4446);
+					DatagramPacket pack = new DatagramPacket(pl, pl.length, request.getSocketAddress());
 					sock0.send(pack);
-					System.out.println("payload: " + pl + " length: " + pl.length + " address: " + request.getAddress() + " port: " + 4446);
-					System.out.println("Unknown command: " + msg);
+					System.out.println("payload: " + pl + " length: " + pl.length + " address: " + request.getAddress() + " port: " + request.getPort());
+					System.out.println("\nUnknown command: " + msg + "\n");
 				}
 				//System.out.println(msg);
 			}

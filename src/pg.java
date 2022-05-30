@@ -4,57 +4,25 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 
-class Demo implements Runnable {
-	private Thread t;
-	private String threadName;
-
-	Demo( String name) {
-		threadName = name;
-		System.out.println("Creating " + threadName);
-	}
-	public void run() {
-		System.out.println("Running " + threadName + "'s shit");
-		try {
-			int rnd = 0;
-			for (int i = 0; i<=10; i++) {
-				rnd = 1 * (int)(Math.random()* 10);
-				System.out.println("Thread: " + threadName + " says" + rnd);
-				Thread.sleep(rnd*10);
-			} 
-		} catch (Exception ex) {
-			System.out.println(ex);
-		}
-			System.out.println("Thread " + threadName + " closes");
-	}
-	public void start() {
-		System.out.println("Starting " + threadName);
-		if (t == null) {
-			t = new Thread (this, threadName);
-			t.start();
-		}
-	}
-}
-
 public class pg {
+	public static int getPort(int min, int max) {
+		
+		for (int i = min; i <= max; i++) {
+			try {
+				DatagramSocket sock0 = new DatagramSocket(i);
+				return i;
+		} catch (Exception bind) {
+			System.out.println(bind);
 
- 	public static void main (String[] args) {
-		Demo t1 = new Demo( "One");
-		t1.start();
-
-		Demo t2 = new Demo( "Two");
-		t2.start();
-		int rand = 0;
-		try {
-			for (int i = 0; i<=10; i++) {
-				rand = 1 * (int)(Math.random() * 10);
-				System.out.println("Main says: " + rand);
-				Thread.sleep(50);
 			}
-		} catch (Exception ex) {
-			System.out.println(ex);
 		}
+		return 0;
+	}
 	
- 	}
+ 	public static void main (String[] args) {
+	System.out.println(getPort(4444, 5555));		
+	
+	}
  
 }
 
