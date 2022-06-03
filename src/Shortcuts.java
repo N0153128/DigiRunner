@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.*;
 
 // 19.05 - untested
 public class Shortcuts {

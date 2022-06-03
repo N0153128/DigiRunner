@@ -19,7 +19,7 @@ class Fetcher implements Runnable {
 		try {
 			InetAddress addr = InetAddress.getByName("localhost");
 			//DatagramSocket sock0 = new DatagramSocket(fetch_port);
-			byte[] buffer = new byte[256];
+			byte[] buffer = new byte[8192];
 			while (true) {
 				DatagramPacket request = new DatagramPacket(buffer, buffer.length);
 				child_sock.receive(request);
@@ -65,7 +65,7 @@ public class User {
 			while (true) {
 				InetAddress addr = InetAddress.getByName("localhost");
 		//		DatagramSocket sock0 = new DatagramSocket(alternate_port);
-				byte[] buffer = new byte[256];
+				byte[] buffer = new byte[8192];
 				int port = 4445;
 				buffer = Shortcuts.strInput("> ").getBytes();
 				DatagramPacket pack = new DatagramPacket(buffer, buffer.length, addr, port);

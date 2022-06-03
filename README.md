@@ -14,12 +14,11 @@
 
 ### To be implemented
 - More mods
-- ASCII-styled intro screen
+- ANSI-styled intro screen
 - networking capabilities
 - client-side leaderboard
 - rules command
 - storage support
-	- 
 
 ### Side notes
 >depricated
@@ -28,6 +27,8 @@
 > In other words, < = > and > = < (Less is more and more is less)
 #### network
 Alt.net will be using public STUN/TURN servers in order to enable client/server and p2p connection, which will make an IP of the user publicly accessible.
+
+All data must be sent in one packet per iteration. Maximum packet size for the UDP implementation is 8192 bytes, this value can be altered, but should not exceed 8192.
 
 Lol i should do this a bit more often...
 

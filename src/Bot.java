@@ -8,7 +8,7 @@ public class Bot {
 		try {
 			DatagramSocket sock0 = new DatagramSocket(4445);
 			boolean run = true;
-			byte[] buffer = new byte[256];
+			byte[] buffer = new byte[8192];
 			while (run) {
 				DatagramPacket request = new DatagramPacket(buffer, buffer.length);
 				sock0.receive(request);
@@ -23,7 +23,7 @@ public class Bot {
 				} else if (msg.equals("/share")) {
 					System.out.println(request.getAddress() + ":" + request.getPort() + " remote:  " + request.getSocketAddress());
 				} else {
-					byte[] pl = new byte[256];
+					byte[] pl = new byte[8192];
 					String reply = "\nUnknown command: " + msg + "\n";
 					pl = reply.getBytes();
 					DatagramPacket pack = new DatagramPacket(pl, pl.length, request.getSocketAddress());
