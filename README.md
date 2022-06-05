@@ -56,3 +56,7 @@ Lol i should do this a bit more often...
 - `Robot.getMultiplier()`returns Multiplier parameter if specified.
 - `Robot.getDelay()`returns Delay parameter if specified.
 - `Robot.getAccel()`returns Accel parameter if specified.
+
+### Commit messages
+- README changes - README.md File was changed
+- Playground changes - code that contains experimental features
