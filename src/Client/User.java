@@ -18,7 +18,6 @@ class Fetcher implements Runnable {
 	public void run() {
 		try {
 			InetAddress addr = InetAddress.getByName("localhost");
-			//DatagramSocket sock0 = new DatagramSocket(fetch_port);
 			byte[] buffer = new byte[8192];
 			while (true) {
 				DatagramPacket request = new DatagramPacket(buffer, buffer.length);
@@ -64,7 +63,6 @@ public class User {
 			fetch.start();
 			while (true) {
 				InetAddress addr = InetAddress.getByName("localhost");
-		//		DatagramSocket sock0 = new DatagramSocket(alternate_port);
 				byte[] buffer = new byte[8192];
 				int port = 4445;
 				buffer = Shortcuts.strInput("> ").getBytes();

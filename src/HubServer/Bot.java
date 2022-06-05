@@ -31,7 +31,6 @@ public class Bot {
 					System.out.println("payload: " + pl + " length: " + pl.length + " address: " + request.getAddress() + " port: " + request.getPort());
 					System.out.println("\nUnknown command: " + msg + "\n");
 				}
-				//System.out.println(msg);
 			}
 		}
 		catch (Exception ex) {
