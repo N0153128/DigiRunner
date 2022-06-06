@@ -1,12 +1,10 @@
 public class Request {
-	private String name = "ABC";
-	private int quantity = 10;
 
-	public void One() {
-		System.out.println("doing one");
+	public void One(int str) {
+		System.out.println("doing one " + str);
 	}
 
-	public void Two() {
-		System.out.println("doing two");
+	public void Two(int str) {
+		System.out.println("doing two " + str);
 	}
 }

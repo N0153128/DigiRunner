@@ -6,9 +6,13 @@ public class CommanderDemo {
 		DoTwo tworeq = new DoTwo(abcReq);
 
 		Server server = new Server();
-		server.serveCommand(onereq);
-		server.serveCommand(tworeq);
-
-		server.collectCommand();
+		for (int i = 0; i <= 10; i++) {
+			//server.serveCommand(onereq);
+		//	server.serveCommand(tworeq);
+		
+		
+			int rnum = 1 + (int)(Math.random() * 10);
+			server.collectCommand(onereq, rnum);
+		}
 	}
 }

@@ -6,7 +6,7 @@ public class DoTwo implements Command {
 
 	}
 
-	public void execute() {
-		abcReq.Two();
+	public void execute(int str) {
+		abcReq.Two(str);
 	}
 }

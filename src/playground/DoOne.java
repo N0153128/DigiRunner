@@ -5,7 +5,7 @@ public class DoOne implements Command {
 		this.abcReq = abcReq;
 	}
 
-	public void execute() {
-		abcReq.One();
+	public void execute(int str) {
+		abcReq.One(str);
 	}
 }
