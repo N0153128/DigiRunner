@@ -1,7 +1,9 @@
+// Main server logic with an event loop
+
 public class ServerDemo {
 	public static void main (String[] args) {
 		Command abcCom = new Command();
-		DoOne onecom = new DoOne(abcCom);
+		Ping onecom = new Ping(abcCom);
 		DoTwo twocom = new DoTwo(abcCom);
 
 		Server server = new Server();

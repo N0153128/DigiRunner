@@ -1,3 +1,5 @@
+// logic of all api commands available to the server
+
 import java.net.DatagramSocket;
 import java.net.DatagramPacket;
 import java.net.InetAddress;

@@ -1,13 +1,14 @@
-
+import java.net.DatagramSocket;
+import java.net.DatagramPacket;
 
 public class Ping implements Request {
 	private Command command;
 
-	public DoOne(Command command) {
+	public Ping(Command command) {
 		this.command = command;
 	}
 
-	public void execute() {
-		command.Ping();
+	public void execute(DatagramSocket sock0, DatagramPacket pack) {
+		command.Ping(sock0, pack);
 	}
 }
