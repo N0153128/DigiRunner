@@ -8,8 +8,10 @@ public class Server {
 	private Map<String, Request> request = new HashMap<String, Request>();
 	p
 
-	public static Request requestResolver(String encoded) {
-		request.put("/ping", Ping)
+	public static Request requestResolver(Map<String, Object> parameters) {
+		request.put("/ping", Ping(parameters.get("socket"), parameters.get("packet")));
+		request.put("/share", Share(parameters.get("socket")));
+		return request.get(parameters.get("command"));
 	}
 
 	public void fillRequest(Request request) {

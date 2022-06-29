@@ -21,10 +21,12 @@
 - storage support
 
 ### Side notes
->depricated
->- If a number is greater than 0 - it acts as a multiplier
->- If a number is lower than 0 - it acts as a divider
-> In other words, < = > and > = < (Less is more and more is less)
+>Temporary list of parameters for the Server.requestResolver()
+>A String refers to the parameter.
+>- "socket" = DatagramSocket
+>- "packet" = DatagramPacket
+>- "message" = String - message text
+>- "command" = String encoded message - reserved for user commands
 #### network
 Alt.net will be using public STUN/TURN servers in order to enable client/server and p2p connection, which will make an IP of the user publicly accessible.
 
