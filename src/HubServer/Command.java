@@ -1,27 +1,23 @@
-// logic of all api commands available to the server
-
-import java.net.DatagramSocket;
-import java.net.DatagramPacket;
-import java.net.InetAddress;
-import java.nio.charset.StandardCharsets;
+import java.net.*;
 
 public class Command {
-	private DatagramSocket sock0;
-
-	public void Ping(DatagramSocket sock, DatagramPacket packet) {
+	private DatagramSocket sock;
+	private DatagramPacket pack;
+	
+	public void Ping (DatagramSocket sock, DatagramPacket pack) {
 		byte[] payload = new byte[256];
-		payload = "Hi".getBytes();
+		payload = "State: Active".getBytes();
 		try {
-			DatagramPacket pack = new DatagramPacket(payload, payload.length, packet.getSocketAddress());
+			DatagramPacket packet = new DatagramPacket(payload, payload.length, pack.getSocketAddress());
 			sock.send(pack);
 		} catch (Exception e) {
-			System.out.println("package not sent: " + e);
+			System.out.println("Package not sent: " + e);
 		}
 		System.out.println("package sent");
+
 	}
 
-	public void Share(DatagramSocket sock) {
-		System.out.println("Two");
+	public void Share(String some) {
+		System.out.println(some);
 	}
-
 }

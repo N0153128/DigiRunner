@@ -5,18 +5,31 @@ import java.util.*;
 import java.net.*;
 
 public class pg {
-	
-	public static <E> requestResolver(E income) {
-		Map<String, Object> supermap = new HashMap<String, Object>();
-		supermap.put("one", 1);
-		supermap.put("two", 0.2);
-		return supermap.get(income);
+
+	int initial;
+
+	public int initial(int parm) {
+		this.initial = parm;
+		return initial;
+	}
+
+	public <T> void requester(T[] income) {
+		for (T element : income) {
+			System.out.printf("%s ", element);
+		}
+		System.out.println(initial(10));
+
 	}
 	
  	public static void main (String[] args) {
-		int resolved = requestResolver(args[0]);
-		System.out.println("" + resolved * 10);
-		
+		pg playground = new pg();
+		Integer[] ints = {1, 2, 3, 4, 5};
+		Double[] doubs = {6.9, 4.7, 1.2};
+		String[] strs = {"P", "I", "Z", "D", "A"};
+		playground.requester(ints);
+		playground.requester(doubs);
+		playground.requester(strs);
+		System.out.println(playground.initial);	
 	}
  
 }
