@@ -1,5 +1,7 @@
+package HubServer;
+
 public class Share implements Request {
-	private Command command;
+	private final Command command;
 	public String text;
 
 	public Share(Command command) {

@@ -1,3 +1,5 @@
+package HubServer;
+
 import java.net.*;
 
 public class Command {

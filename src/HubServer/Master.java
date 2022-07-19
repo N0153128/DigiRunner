@@ -1,3 +1,5 @@
+package HubServer;
+
 public class Master {
 	public static void main (String[] args) {
 		Command command = new Command();
