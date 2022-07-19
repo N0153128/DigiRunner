@@ -1,0 +1,8 @@
+*.logs
+*.class
+*.swp
+bin
+.settings
+.idea
+.classpath
+.project
