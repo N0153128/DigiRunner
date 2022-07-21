@@ -27,6 +27,10 @@
 >- "packet" = DatagramPacket
 >- "message" = String - message text
 >- "command" = String encoded message - reserved for user commands
+
+> Invoker#requestResolver must be rewritten in the future without if-else statements.
+
+
 #### network
 Alt.net will be using public STUN/TURN servers in order to enable client/server and p2p connection, which will make an IP of the user publicly accessible.
 
