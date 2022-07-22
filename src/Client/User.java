@@ -5,11 +5,11 @@ import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.Inet4Address;
 import java.net.BindException;
+import Support.Shortcuts;
 
 class Fetcher implements Runnable {
-	private Thread thread;
-	private String threadName;
-	private DatagramSocket child_sock;
+	private final String threadName;
+	private final DatagramSocket child_sock;
 
 	Fetcher(String name, DatagramSocket sock) {
 		threadName = name;
@@ -35,7 +35,7 @@ class Fetcher implements Runnable {
 	}
 
 	public void start() {
-		thread = new Thread(this, threadName);
+		Thread thread = new Thread(this, threadName);
 		thread.start();
 	}
 
@@ -65,7 +65,7 @@ public class User {
 			fetch.start();
 			while (true) {
 				InetAddress addr = InetAddress.getByName("localhost");
-				byte[] buffer = new byte[8192];
+				byte[] buffer;
 				int port = 4445;
 				buffer = Shortcuts.strInput("> ").getBytes();
 				DatagramPacket pack = new DatagramPacket(buffer, buffer.length, addr, port);

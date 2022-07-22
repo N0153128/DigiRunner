@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Atom {	
+public class Depricated.Atom {
  
 	double num = 100 + (Math.random() * 50);
 	
@@ -59,7 +59,7 @@ public class Atom {
 	public static void atomGenerator() {
 		int atom = 0;
 		while (true) {
-			if (Atom.jumpSearch(Atom.arrGenerator(100), (int)(100+ Math.random() * 100))) {
+			if (Depricated.Atom.jumpSearch(Depricated.Atom.arrGenerator(100), (int)(100+ Math.random() * 100))) {
 				atom++;
 				System.out.println(atom);
 			}
@@ -67,9 +67,9 @@ public class Atom {
 	}
 
 	public static void main (String[] args) {
-//	 	Atom.jumpSearch(Atom.arrGenerator(100000), (int)(100+ Math.random() * 10000));
+//	 	Depricated.Atom.jumpSearch(Depricated.Atom.arrGenerator(100000), (int)(100+ Math.random() * 10000));
 		while (true) {
-			Atom.atomGenerator();
+			Depricated.Atom.atomGenerator();
 		}
 	}
 

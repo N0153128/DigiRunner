@@ -1,4 +1,4 @@
-package HubServer;
+package Depricated;
 
 import java.net.DatagramSocket;
 import java.net.DatagramPacket;

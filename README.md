@@ -1,8 +1,8 @@
 # Alt.net - hackable game
 
 ### Implemented
-- ``Atom.hexer()`` base mining method, by default takes ``init`` parameter that defines the amount of "blocks" to be mined. Uses alternative arguments for boosts, penalties and other modifiers.
-- ``Atom.benchMine()`` simple benchmarking method that demonstrates machine's capabilities. Runs ``Atom.hexer(64)`` without any additional mods.
+- ``Depricated.Atom.hexer()`` base mining method, by default takes ``init`` parameter that defines the amount of "blocks" to be mined. Uses alternative arguments for boosts, penalties and other modifiers.
+- ``Depricated.Atom.benchMine()`` simple benchmarking method that demonstrates machine's capabilities. Runs ``Depricated.Atom.hexer(64)`` without any additional mods.
 
 > Implemented mods
 > Divider - decreases scope of each block's value - positive ==Done==
@@ -52,10 +52,12 @@ Lol i should do this a bit more often...
 - Home - A hardware representation of a single user node that serves as an entry point to the network for other Alts.
 
 ### News and updates
-- *25.04.2022* Robot class now has all features of the Atom class with improved hierarchy and Effective Builder Pattern implementation. Atom class becomes deprecated.
+- *25.04.2022* Robot class now has all features of the Depricated.Atom class with improved hierarchy and Effective Builder Pattern implementation. Depricated.Atom class becomes deprecated.
 - *30.05.2022* Added abstract UDP client and server, added auto-port selection for the client, added Fetcher daemon for the client, added shortcuts, for easy input parsing. 
 
 ### API (kinda)
+- Hub server port: 4445
+
 *Robot getters*
 - `Robot.getInit()`  returns Init parameter if specified.
 - `Robot.getDivider()` returns Divider parameter if specified.

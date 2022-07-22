@@ -11,15 +11,24 @@ public class Command {
 		payload = "State: Active".getBytes();
 		try {
 			DatagramPacket packet = new DatagramPacket(payload, payload.length, pack.getSocketAddress());
-			sock.send(pack);
+			sock.send(packet);
 		} catch (Exception e) {
 			System.out.println("Package not sent: " + e);
 		}
-		System.out.println("package sent");
+		System.out.println("package sent: " + new String(payload, 0, payload.length));
 
 	}
 
-	public void Share(String some) {
-		System.out.println(some);
+	public void Share(DatagramSocket sock, DatagramPacket pack) {
+		byte[] payload;
+		String msg = "Address: " + pack.getAddress() + ":" + pack.getPort();
+		payload = msg.getBytes();
+		try {
+			DatagramPacket packet = new DatagramPacket(payload, payload.length, pack.getSocketAddress());
+			sock.send(packet);
+		} catch (Exception e) {
+			System.out.println("Package not sent: " + e);
+		}
+		System.out.println("package sent: " + msg);
 	}
 }

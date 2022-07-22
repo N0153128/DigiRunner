@@ -1,5 +1,5 @@
-import java.lang.Thread;
-import java.io.*;
+package Depricated;
+
 import java.util.*;
 
 public class Atom {
@@ -109,7 +109,7 @@ public class Atom {
  
  	public static void main (String[] args) {
  	 	//int bak = 8;
-		//System.out.println(Atom.tunnelSearch(bak));
+		//System.out.println(Depricated.Atom.tunnelSearch(bak));
 		//System.out.println("Max mem: " + Runtime.getRuntime().maxMemory());
 		Atom.benchMine();
 		System.out.println();

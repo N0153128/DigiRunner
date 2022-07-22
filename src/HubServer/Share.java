@@ -1,15 +1,21 @@
 package HubServer;
 
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+
 public class Share implements Request {
 	private final Command command;
-	public String text;
+	private final DatagramPacket packet;
+	private final DatagramSocket sock0;
 
-	public Share(Command command) {
+	public Share(Command command, DatagramSocket sock, DatagramPacket pack) {
 		this.command = command;
+		this.packet = pack;
+		this.sock0 = sock;
 	}
 	
 	public void execute() {
-		command.Share(this.text);
+		command.Share(sock0, packet);
 	}
 
 }
