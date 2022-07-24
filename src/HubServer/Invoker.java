@@ -47,6 +47,9 @@ class Invoker implements Runnable{
 		} else if (wish.equals("/ping")) {
 			Ping ping = new Ping(command, child_sock, packet);
 			serveRequest(ping);
+		} else if (wish.equals("/off")) {
+			Off off = new Off(command, child_sock, packet);
+			serveRequest(off);
 		}
 	}
 

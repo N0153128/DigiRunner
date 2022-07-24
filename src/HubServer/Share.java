@@ -15,7 +15,7 @@ public class Share implements Request {
 	}
 	
 	public void execute() {
-		command.Share(sock0, packet);
+		command.share(sock0, packet);
 	}
 
 }
